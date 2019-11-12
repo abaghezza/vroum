@@ -1,0 +1,46 @@
+// site de git :
+https://git-scm.com/
+
+1. Installation : accepter les options par défaut.
+
+2. Configurer son compte
+$ git config --global user.name "[name]"
+//Sets the name you want atached to your commit transactions
+$ git config --global user.email "[email address]"
+//Sets the email you want atached to your commit transactions
+
+3. créer un dépot à partir d'un dossier existant
+$ cd monprojet
+$ git init
+
+4. Créer un point de sauvegarde
+//sélectionner les fichiers à sauvegarder : "." pour tout
+$ git add .
+$ git commit -m "Hello world ! (1er sauvegarde)"
+
+5. Status et Historique
+$ git status
+$ git log -v
+
+6. Branches
+//liste des branches
+$ git branch
+//créer une branches
+$ git branch [nom]
+//changer de branches
+$ git checkout [nom]
+//Combines the specified branch’s history into the current branch
+$ git merge [branch]
+//Deletes the specified branch
+$ git branch -d [branch-name]
+
+7. Partage de projet
+//affiche le depot distant
+$ git remote
+//Créer un dépot distant : cf github.com : récuperer l'URL associée
+//configurer le dépot distant
+$ git remote add origin [URL]
+//Pousser le dépot local vers le dépot distant
+$ git push -u origin master 
+//récupère les mises à jours depuis un depot distant
+$ git pull

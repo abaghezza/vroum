@@ -1,0 +1,60 @@
+<MCD>
+    <ENTITE>
+    moniteur
+        - id
+        - nom
+    
+    client
+        - id
+        - nom
+    
+    voiture
+        - id
+    
+    Lecon
+        - id
+        - date
+        - heure debut
+        - heure de fin
+    </ENTITE>
+    <ASSOCIATION>
+    Affecter
+        - moniteur 0,N
+        - lecon 1,1
+
+    Affecter
+        - voiture 0,N
+        - lecon 0,1
+    
+    Affecter
+        - client 0,N 
+        - lecon 1,N
+    </ASSOCIATION>
+</MCD>
+
+<MLD>
+    moniteur
+        - id (PK)
+        - nom
+    
+    client
+        - id (PK)
+        - nom
+    
+    voiture
+        - id (PK)
+    
+    Lecon
+        - id (PK)
+        - date
+        - heure debut
+        - heure de fin
+        - le_moniteur (FK)
+        - le_voiture (FK)
+
+    affectation
+        id (PK)
+        af_client (FK)
+        af_lecon (FK)
+
+</MLD>
